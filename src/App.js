@@ -1,24 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { LeftHandComponent } from "./components/LeftHandComponent";
+import { RightHandComponent } from "./components/RightHandComponent";
+import { SplitScreen } from "./layouts/SplitScreen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SplitScreen leftWeight={1} rightWeight={2}>
+      <LeftHandComponent name="this is my name" />
+      <RightHandComponent message="this is my message" />
+    </SplitScreen>
   );
 }
 
