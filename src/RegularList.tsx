@@ -1,12 +1,12 @@
 import { Person, Product } from "./App";
 
-interface ListProps {
+type RegularListProps = {
   items: Person[] | Product[];
   resourceName: string;
   listItemComponent: React.ElementType;
-}
+};
 
-export const RegularList = ({ items, resourceName, listItemComponent: ListItemComponent }: ListProps) => {
+export const RegularList = ({ items, resourceName, listItemComponent: ListItemComponent }: RegularListProps) => {
   return (
     <>
       {items.map((item, i) => {
