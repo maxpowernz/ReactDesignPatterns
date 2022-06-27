@@ -1,0 +1,19 @@
+import { Person } from "../App";
+
+export const LargePersonListItem = ({ person }: { person: Person }) => {
+  const { name, age, hairColor, hobbies } = person;
+
+  return (
+    <>
+      <h3>{name}</h3>
+      <p>{age}</p>
+      <p>{hairColor}</p>
+      <h3>Hobbies</h3>
+      <ul>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
+        ))}
+      </ul>
+    </>
+  );
+};
